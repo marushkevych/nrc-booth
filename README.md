@@ -3,7 +3,7 @@
 
 # Mongo DB
 
-To configure your Mongodb connection add the following to `local.js`:
+To enable environment specific Mongodb config, move the following from `adapters.js` to `local.js`:
 
 ```js
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
   adapters: {
       'default': 'mongo',
       
-      nongo: {
+      mongo: {
           module: 'sails-mongo',
           host: 'localhost',
           user: '',
