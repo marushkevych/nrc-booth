@@ -1,16 +1,14 @@
-# nrc-booth
-### a Sails application
+
 
 # REST API
 
-## provided restful resources:
+### provided restful resources:
 The following resources can be accessed through REST api and have corresponding collections in mongoDB
-- `loyaltyCard`
+- `loyaltycard`
 - `ppcard`
 
-## Find card by card number
-`POST http://host/loyaltyCard/find`
-with
+### find card by card number
+`POST http://localhost:1337/loyaltyCard/find`
 
 ```js
 {
@@ -20,14 +18,22 @@ with
 }
 ```
 
-## Update card holder name and site code
-`PUT http://host/loyaltyCard/53bc724c3cc626fc38cc1f1a`
-with
+### update card holder name and site code
+`PUT http://localhost:1337/loyaltyCard/53bc724c3cc626fc38cc1f1a`
 
 ```js
 {
     "name": "Dummy User",
     "site": "654654"
+}
+```
+
+### add card (for testing)
+`POST http://localhost:1337/loyaltyCard`
+
+```js
+{
+    "number":456987321
 }
 ```
 
