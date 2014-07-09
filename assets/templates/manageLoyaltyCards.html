@@ -1,0 +1,9 @@
+<h2>Manage Loyalty Cards</h2>
+<form name="form" novalidate ng-submit="addCard()">
+    <label for="emailId">Card Number: </label> 
+    <input type="number" name="number" ng-model="card.number" ng-required='true' ng-maxlength="50" size="40">
+    <button type='submit' ng-disabled="form.$invalid">Add New Card</button> 
+</form>
+
+
+<pre>{{cards | json}}</pre>

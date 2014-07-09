@@ -1,0 +1,25 @@
+<h2>Manage PP Cards</h2>
+<form name="form" novalidate ng-submit="addCard()">
+    <label for="emailId">Card Number </label> 
+    <input type="number" name="number" ng-model="card.number" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <label for="emailId">Security Code </label> 
+    <input type="number" name="security" ng-model="card.security" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <label for="emailId">Litres Remaining </label> 
+    <input type="number" name="litres" ng-model="card.litres" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <label for="emailId">Fuel Discount </label> 
+    <input type="number" name="discount" ng-model="card.discount" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <label for="emailId">Card Value </label> 
+    <input type="number" name="value" ng-model="card.value" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <label for="emailId">Expiration Date </label> 
+    <input type="date" name="expDate" ng-model="card.expDate" ng-required='true' ng-maxlength="50" size="40">
+    <br>
+    <button type='submit' ng-disabled="form.$invalid">Add New Card</button> 
+</form>
+
+
+<pre>{{cards | json}}</pre>
