@@ -1,12 +1,15 @@
 # nrc-booth
 ### a Sails application
 
-# Mongo DB
+# Environment config
 
-To enable environment specific Mongodb config, move the following from `adapters.js` to `local.js`:
+To configure environment and Mongodb, create `config/local.js` with following:
 
 ```js
 module.exports = {
+
+  port: process.env.PORT || 1337,
+  environment: process.env.NODE_ENV || 'development',
 
   adapters: {
       'default': 'mongo',
@@ -21,6 +24,7 @@ module.exports = {
           schema: false
       }
   }
-}
+
+};
 ```
 
